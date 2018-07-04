@@ -1,0 +1,11 @@
+
+<div *ngIf="display == true; then show else error;"></div>
+
+<ng-template #show>
+        <app-datatable></app-datatable>
+        <app-gainchart></app-gainchart>
+      
+</ng-template>
+
+
+<ng-template #error>Data not received</ng-template>

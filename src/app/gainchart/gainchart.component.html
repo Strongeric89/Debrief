@@ -1,0 +1,19 @@
+<h1>GainCharts</h1>
+<div *ngIf="user | async; let user; else loading">
+  <h2>{{user.firstName}} {{user.lastName}}</h2>
+  <dl>
+    <dt>Age:</dt>
+    <dd>{{user.age}}</dd>
+
+    <dt>Height:</dt>
+    <dd>{{user.height}}</dd>
+
+    <dt>Mass:</dt>
+    <dd>{{user.mass}}</dd>
+
+    <dt>Home World:</dt>
+    <dd>{{user.homeWorld}}</dd>
+  </dl>
+</div>
+
+<ng-template #loading>Waiting on Gain Data...</ng-template>
