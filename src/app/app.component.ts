@@ -13,6 +13,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit(){
 
+    //set up websocket in data services
+
   }
  
 

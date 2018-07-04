@@ -11,6 +11,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ChartobserverComponent implements AfterViewInit{
 
+  
   constructor() { }
 
   display = true; // used as to show everything on the main app page
@@ -26,6 +27,7 @@ export class ChartobserverComponent implements AfterViewInit{
 
   @ViewChild(DatatableComponent) datatable;
   @ViewChild(GainchartComponent) gainchart;
+  //add other children
 
 
 
@@ -35,6 +37,7 @@ export class ChartobserverComponent implements AfterViewInit{
      * This is where I receive in the BehaviourState from the child 
      * component. Which is then used to display wether or not we have data
      */
+
     //add all children modules
     this.datatable.flagCurrent.subscribe(data =>{
       console.log(data)
@@ -47,7 +50,6 @@ export class ChartobserverComponent implements AfterViewInit{
     });
 
    //if not data at all
-
     if(this.tableFlag != true && this.gainFlag != true){
       this.display = false;
     }else{

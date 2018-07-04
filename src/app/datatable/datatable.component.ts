@@ -13,6 +13,9 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class DatatableComponent implements OnInit {
 
+  //add chart stuff
+
+  //this is the oberserved flag that the parent chartobserver will look at
   public user: Observable<{}>;
   subscription: Subscription;
 
@@ -22,10 +25,14 @@ export class DatatableComponent implements OnInit {
  
   
   constructor() { }
+
+   // get data from parseSample() which is sent from the websocket - dataservice
+
   
   ngOnInit() {
-   //this.user = this.getAsyncData().pipe(share());
+   this.user = this.getAsyncData().pipe(share());
 
+  
     if(this.user){
       //i got data!
       /**
